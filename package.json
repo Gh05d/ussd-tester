@@ -1,0 +1,21 @@
+{
+  "name": "ussd-tester",
+  "version": "0.0.1",
+  "description": "Simple website to detect the users OS and display a code to get cell data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch\" \"live-server --port=3000 .\""
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "Pascal Clanget",
+  "license": "ISC",
+  "packageManager": "pnpm@10.5.0",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "typescript": "^5.8.2"
+  }
+}

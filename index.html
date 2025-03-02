@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>USSD-Code Tester</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js/dist/ua-parser.min.js"></script>
+    <script type="module" src="./dist/main.mjs"></script>
+  </head>
+  <body>
+    <noscript
+      >Diese Seite benötigt JavaScript um korrekt zu funktionieren</noscript
+    >
+
+    <main id="app">
+      <h1>USSD-Code Tester</h1>
+
+      <p>
+        Bitte gehen Sie zu ihrem Gerät und starten dann den Test mit druck auf
+        den Knopf.
+      </p>
+
+      <button id="copy-code-button">Test starten</button>
+
+      <div id="fallback">
+        <span
+          >Falls Sie Probleme haben den Test zu starten, so kopieren Sie bitte
+          den folgenden Code:</span
+        >
+        <pre
+          title="Klicken, um den Code in die Zwischenablage zu kopieren"
+        ></pre>
+
+        <span>und führen ihn auf ihrem Anrufbildschirm aus.</span>
+      </div>
+    </main>
+  </body>
+</html>
