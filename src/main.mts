@@ -32,7 +32,7 @@ function searchCode() {
       case "Motorola":
       case "Huawei":
       default:
-        return "bad";
+        return "badd";
       //  return "*#*#4636#*#*";
     }
   } catch (error) {
