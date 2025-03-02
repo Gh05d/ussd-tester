@@ -9,14 +9,21 @@ function searchCode() {
 
       case "Samsung":
       case "OnePlus":
+      case "Motorola":
       case "Huawei":
         return "*#*#4636#*#*";
+
+      case "LG":
+        return "*#*#197328640#*#*";
+
+      case "Sony":
+        return "*#*#7378423#*#*";
 
       case "Xiaomi":
         return "*#*#6484#*#";
 
       case "Vivo":
-        return " *##4838##*";
+        return "*##4838##*";
 
       case "HTC":
         return "*#*#1111#*#*";
