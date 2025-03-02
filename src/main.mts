@@ -6,8 +6,8 @@ async function searchCode() {
     const parser = new UAParser();
 
     if (parser.getResult().os.name == "Apple") return appleCode;
-    // const element = document.getElementById("error");
-    // element!.textContent = JSON.stringify(parser.getResult(), null, 2);
+    const element = document.getElementById("error");
+    element!.textContent = JSON.stringify(parser.getResult(), null, 2);
 
     switch (parser.getResult().device.vendor) {
       case "Apple":
