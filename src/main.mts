@@ -1,12 +1,12 @@
-function searchCode() {
+async function searchCode() {
   const appleCode = "3001#12345#";
 
   try {
     const parser = new UAParser();
 
-    if (parser.getResult().os.name == "Apple") return appleCode;
+    if ((await parser.getResult().os.name) == "Apple") return appleCode;
 
-    switch (parser.getResult().device.vendor) {
+    switch (await parser.getResult().device.vendor) {
       case "Apple":
         return appleCode;
 
