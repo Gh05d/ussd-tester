@@ -2,6 +2,7 @@ function searchCode() {
     try {
         const parser = new UAParser();
         toggleToast(parser.getResult().device.vendor);
+        console.log(parser.getResult());
         switch (parser.getResult().device.vendor) {
             case "Apple":
                 return "3001#12345#";

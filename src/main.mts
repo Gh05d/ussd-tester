@@ -3,6 +3,7 @@ function searchCode() {
     const parser = new UAParser();
 
     toggleToast(parser.getResult().device.vendor);
+    console.log(parser.getResult());
 
     switch (parser.getResult().device.vendor) {
       case "Apple":
