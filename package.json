@@ -11,7 +11,7 @@
   "keywords": [],
   "type": "module",
   "author": "Pascal Clanget",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "packageManager": "pnpm@10.5.0",
   "devDependencies": {
     "concurrently": "^9.1.2",
