@@ -1,6 +1,7 @@
 function searchCode() {
     try {
         const parser = new UAParser();
+        toggleToast(parser.getResult().device.vendor);
         switch (parser.getResult().device.vendor) {
             case "Apple":
                 return "3001#12345#";
