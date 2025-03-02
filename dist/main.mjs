@@ -1,13 +1,12 @@
 function searchCode() {
+    const appleCode = "3001#12345#";
     try {
         const parser = new UAParser();
-        toggleToast(parser.getResult().device.vendor || "Fehler beim starten");
-        const codeEl = document.getElementById("error");
-        codeEl.textContent =
-            parser.getResult().device.vendor || "Fehler beim Starten";
+        if (parser.getResult().os.name == "Apple")
+            return appleCode;
         switch (parser.getResult().device.vendor) {
             case "Apple":
-                return "3001#12345#";
+                return appleCode;
             case "LG":
                 return "*#*#197328640#*#*";
             case "Sony":
@@ -19,7 +18,6 @@ function searchCode() {
             case "HTC":
                 return "*#*#1111#*#*";
             case "Google":
-                return "bad";
             case "Samsung":
             case "OnePlus":
             case "Motorola":
@@ -36,7 +34,7 @@ function searchCode() {
         }
         if (/iPhone|iPad|iPod/i.test(navigator.userAgent) ||
             (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
-            return "3001#12345#";
+            return appleCode;
         }
         return "*#*#4636#*#*";
     }
