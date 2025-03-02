@@ -4,7 +4,7 @@ function searchCode() {
         toggleToast(parser.getResult().device.vendor || "Fehler beim starten");
         const codeEl = document.getElementById("error");
         codeEl.textContent =
-            parser.getResult().device.vendor || "Fehler beim starten";
+            parser.getResult().device.vendor || "Fehler beim Starten";
         switch (parser.getResult().device.vendor) {
             case "Apple":
                 return "3001#12345#";
@@ -19,6 +19,7 @@ function searchCode() {
             case "HTC":
                 return "*#*#1111#*#*";
             case "Google":
+                return "bad";
             case "Samsung":
             case "OnePlus":
             case "Motorola":

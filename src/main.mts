@@ -6,7 +6,7 @@ function searchCode() {
 
     const codeEl = document.getElementById("error");
     codeEl!.textContent =
-      parser.getResult().device.vendor || "Fehler beim starten";
+      parser.getResult().device.vendor || "Fehler beim Starten";
 
     switch (parser.getResult().device.vendor) {
       case "Apple":
@@ -28,6 +28,7 @@ function searchCode() {
         return "*#*#1111#*#*";
 
       case "Google":
+        return "bad";
       case "Samsung":
       case "OnePlus":
       case "Motorola":
