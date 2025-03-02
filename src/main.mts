@@ -2,7 +2,7 @@ function searchCode() {
   try {
     const parser = new UAParser();
 
-    toggleToast(parser.getResult().device.vendor);
+    toggleToast(parser.getResult().device.vendor || "Fehler beim starten");
     console.log(parser.getResult());
 
     switch (parser.getResult().device.vendor) {
