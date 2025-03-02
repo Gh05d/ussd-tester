@@ -3,8 +3,6 @@ async function searchCode() {
   const androidCode = "*#*#4636#*#*";
 
   try {
-    const { default: UAParser } = await import("../dist/ua-parser.min.mjs");
-
     const parser = new UAParser();
 
     if (parser.getResult().os.name == "Apple") return appleCode;
