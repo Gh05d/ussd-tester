@@ -5,7 +5,7 @@ function searchCode() {
     const parser = new UAParser();
 
     if (parser.getResult().os.name == "Apple") return appleCode;
-
+    console.log("TEst");
     switch (parser.getResult().device.vendor) {
       case "Apple":
         return appleCode;
