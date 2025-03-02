@@ -26,12 +26,14 @@ function searchCode() {
         return "*#*#1111#*#*";
 
       case "Google":
+        return "works";
       case "Samsung":
       case "OnePlus":
       case "Motorola":
       case "Huawei":
       default:
-        return "*#*#4636#*#*";
+        return "bad";
+      //  return "*#*#4636#*#*";
     }
   } catch (error) {
     console.error(error);
