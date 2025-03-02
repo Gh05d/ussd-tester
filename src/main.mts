@@ -1,17 +1,10 @@
 function searchCode() {
   try {
     const parser = new UAParser();
-    console.log(parser.getResult().device.vendor);
 
     switch (parser.getResult().device.vendor) {
       case "Apple":
         return "3001#12345#";
-
-      case "Samsung":
-      case "OnePlus":
-      case "Motorola":
-      case "Huawei":
-        return "*#*#4636#*#*";
 
       case "LG":
         return "*#*#197328640#*#*";
@@ -29,11 +22,17 @@ function searchCode() {
         return "*#*#1111#*#*";
 
       case "Google":
+      case "Samsung":
+      case "OnePlus":
+      case "Motorola":
+      case "Huawei":
       default:
         return "*#*#4636#*#*";
     }
   } catch (error) {
     console.error(error);
+
+    toggleToast(error?.message);
 
     if (navigator?.userAgentData?.platform) {
       return navigator.userAgentData.platform;
