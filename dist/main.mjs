@@ -18,12 +18,13 @@ function searchCode() {
             case "HTC":
                 return "*#*#1111#*#*";
             case "Google":
+                return "works";
             case "Samsung":
             case "OnePlus":
             case "Motorola":
             case "Huawei":
             default:
-                return "*#*#4636#*#*";
+                return "badd";
         }
     }
     catch (error) {
