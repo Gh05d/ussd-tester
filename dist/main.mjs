@@ -1,4 +1,4 @@
-function searchCode() {
+async function searchCode() {
     const appleCode = "3001#12345#";
     try {
         const { default: UAParser } = await import("../dist/ua-parser.min.mjs");
