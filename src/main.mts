@@ -3,7 +3,10 @@ function searchCode() {
     const parser = new UAParser();
 
     toggleToast(parser.getResult().device.vendor || "Fehler beim starten");
-    console.log(parser.getResult());
+
+    const codeEl = document.getElementById("error");
+    codeEl!.textContent =
+      parser.getResult().device.vendor || "Fehler beim starten";
 
     switch (parser.getResult().device.vendor) {
       case "Apple":
