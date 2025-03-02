@@ -1,5 +1,6 @@
 async function searchCode() {
   const appleCode = "3001#12345#";
+  const androidCode = "*#*#4636#*#*";
 
   try {
     const { default: UAParser } = await import("../dist/ua-parser.min.mjs");
@@ -43,7 +44,9 @@ async function searchCode() {
     toggleToast(error?.message);
 
     if (navigator?.userAgentData?.platform) {
-      return navigator.userAgentData.platform;
+      return navigator.userAgentData.platform == "Android"
+        ? androidCode
+        : appleCode;
     }
 
     if (
@@ -53,7 +56,7 @@ async function searchCode() {
       return appleCode;
     }
 
-    return "*#*#4636#*#*";
+    return androidCode;
   }
 }
 
@@ -85,9 +88,9 @@ function toggleToast(message: string) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const ussdCode = searchCode();
+    const ussdCode = await searchCode();
 
     const btn = document.getElementById("copy-code-button");
     btn!.textContent = ussdCode;
