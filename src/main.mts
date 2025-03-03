@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btn = document.getElementById("copy-code-button");
     btn!.addEventListener("click", () => {
       try {
-        window.location.href = "tel:" + ussdCode;
+        window.location.href = "tel:";
       } catch (err) {
         toggleToast("Fehler beim Ausführen des USSD-Codes.");
       }
