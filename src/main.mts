@@ -1,5 +1,5 @@
 async function searchCode() {
-  const appleCode = "3001#12345#";
+  const appleCode = "*3001#12345#*";
   const androidCode = "*#*#4636#*#*";
 
   try {
@@ -88,13 +88,12 @@ function toggleToast(message: string) {
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const ussdCode = await searchCode();
+    const ussdCode = await encodeUSSD(await searchCode());
 
     const btn = document.getElementById("copy-code-button");
-    btn!.textContent = ussdCode;
     btn!.addEventListener("click", () => {
       try {
-        window.location.href = "tel:" + encodeUSSD(ussdCode);
+        window.location.href = "tel:" + ussdCode;
       } catch (err) {
         toggleToast("Fehler beim Ausführen des USSD-Codes.");
       }

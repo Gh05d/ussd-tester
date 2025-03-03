@@ -16,24 +16,30 @@
     <main id="app">
       <h1>USSD-Code Tester</h1>
 
-      <p>
-        Bitte begeben Sie sich zu ihrem installierten Gerät und starten den
-        Test.
-      </p>
+      <h2>Anleitung</h2>
+      <ol>
+        <li>Bitte begeben Sie sich zu ihrem installierten Gerät.</li>
 
-      <button id="copy-code-button">Test starten</button>
+        <li>
+          <span>Kopieren Sie folgenden Code</span>
 
-      <div id="fallback">
-        <span
-          >Falls Sie Probleme haben den Test zu starten, so kopieren Sie bitte
-          den folgenden Code:</span
-        >
-        <pre title="Klicken, um den Code in die Zwischenablage zu kopieren">
+          <pre
+            role="button"
+            alt="Klicken, um den Code in die Zwischenablage zu kopieren"
+            title="Klicken, um den Code in die Zwischenablage zu kopieren"
+          >
 Code kopieren</pre
-        >
+          >
+        </li>
 
-        <span>und fügen ihn in ihrem Anrufbildschirm aus.</span>
-      </div>
+        <li>
+          <div>
+            Öffnen Sie Ihren Anrufbildschirm und fügen Sie den Code ein.
+          </div>
+
+          <button id="copy-code-button">Anrufbildschirm öffnen</button>
+        </li>
+      </ol>
 
       <p id="error"></p>
     </main>

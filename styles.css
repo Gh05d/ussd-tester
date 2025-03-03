@@ -41,9 +41,8 @@ a {
   text-decoration: none;
 }
 
-ul,
 ol {
-  list-style: none;
+  margin: 1rem;
 }
 
 button,
@@ -168,6 +167,7 @@ pre {
   cursor: pointer;
   user-select: none;
   text-align: center;
+  margin-block: 1em;
 }
 
 #fallback {
@@ -203,4 +203,9 @@ pre {
   100% {
     opacity: 0;
   }
+}
+
+#copy-code-button {
+  width: 100%;
+  margin-block: 1rem;
 }
