@@ -44,9 +44,6 @@ async function searchCode() {
         return androidCode;
     }
 }
-function encodeUSSD(ussd) {
-    return ussd.replace(/\*/g, "%2A").replace(/#/g, "%23");
-}
 function updateFallback(code) {
     const codeEl = document.querySelector("pre");
     codeEl.textContent = code;
@@ -71,7 +68,7 @@ function toggleToast(message) {
 }
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const ussdCode = await encodeUSSD(await searchCode());
+        const ussdCode = await searchCode();
         const btn = document.getElementById("copy-code-button");
         btn.addEventListener("click", () => {
             try {
