@@ -68,17 +68,7 @@ function toggleToast(message) {
 }
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        const ussdCode = await searchCode();
-        const btn = document.getElementById("copy-code-button");
-        btn.addEventListener("click", () => {
-            try {
-                window.location.href = "tel:";
-            }
-            catch (err) {
-                toggleToast("Fehler beim Ausführen des USSD-Codes.");
-            }
-        });
-        updateFallback(ussdCode);
+        updateFallback(await searchCode());
     }
     catch (error) {
         console.error(error);
